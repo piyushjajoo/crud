@@ -36,7 +36,8 @@ var userLicense string
 var rootCmd = &cobra.Command{
 	Use:   "crud",
 	Short: "crud cli scaffolds a basic http server micro-service along with deployable manifests",
-	Long: `crud is a CLI utility which helps in scaffolding a simple go based micro-service along with 
+	Long: `
+crud is a CLI utility which helps in scaffolding a simple go based micro-service along with 
 build scripts, api documentation, micro-service documentation and k8s deployment manifests
 `,
 }
@@ -50,14 +51,14 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.crud.yaml)")
-	rootCmd.PersistentFlags().StringP("author", "a", "YOUR NAME <EMAIL ADDRESS>", "author name for copyright attribution")
-	rootCmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "", "name of license for the project")
-	rootCmd.PersistentFlags().Bool("viper", false, "use Viper for configuration")
-	cobra.CheckErr(viper.BindPFlag("author", rootCmd.PersistentFlags().Lookup("author")))
-	cobra.CheckErr(viper.BindPFlag("useViper", rootCmd.PersistentFlags().Lookup("viper")))
-	viper.SetDefault("author", "NAME HERE <EMAIL ADDRESS>")
-	viper.SetDefault("license", "none")
+	//rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.crud.yaml)")
+	//rootCmd.PersistentFlags().StringP("author", "a", "YOUR NAME <EMAIL ADDRESS>", "author name for copyright attribution")
+	//rootCmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "", "name of license for the project")
+	//rootCmd.PersistentFlags().Bool("viper", false, "use Viper for configuration")
+	//cobra.CheckErr(viper.BindPFlag("author", rootCmd.PersistentFlags().Lookup("author")))
+	//cobra.CheckErr(viper.BindPFlag("useViper", rootCmd.PersistentFlags().Lookup("viper")))
+	//viper.SetDefault("author", "NAME HERE <EMAIL ADDRESS>")
+	//viper.SetDefault("license", "none")
 }
 
 // initConfig reads in config file and ENV variables if set.

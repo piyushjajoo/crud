@@ -36,21 +36,20 @@ var name string
 
 // initCmd represents the init command
 var initCmd = &cobra.Command{
-	Use:     "init <name>",
-	Short:   "init initializes the micro-service",
+	Use:     "init <module name>",
+	Short:   "init creates the scaffolding for the go based micro-service",
 	Aliases: []string{"initialize", "initialise", "create"},
-	Long: `Init (cobra init) command initializes the go module. 
+	Long: `
+Init (cobra init) command initializes the go module along with a bare-bone http-server.
+Please make sure you have go installed and GOPATH set. Also make sure you have helm v3 installed as well.
 
-	Please make sure you have go installed and GOPATH set. Also make sure you have helm v3 installed as well.
-	
-	By default if no flags provided it initializes following -
-	
-	1. go.mod and go.sum files
-	2. Dockerfile to build your micro-service along with build.sh script
-	3. main.go with bare http-server written in gorilla mux
-	4. README.md with basic Summary
+By default if no flags provided it initializes following -
+1. go.mod and go.sum files
+2. Dockerfile to build your micro-service along with build.sh script
+3. main.go with bare http-server written in gorilla mux
+4. README.md with basic Summary
 
-	If you want api documentation provide --swagger flag. If you want helm chart provide --chart flag.
+If you want api documentation provide --swagger flag. If you want helm chart provide --chart flag.
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
