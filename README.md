@@ -13,8 +13,8 @@ go install github.com/piyushjajoo/crud
 ## Initialize Command
 
 Initialize command initializes the project. 
-If `--api` flag is provided, swagger documentation will be created.
-If `--helm` flag is provided, helm chart to deploy the service will be created.
+If `--swagger` flag is provided, swagger documentation will be created.
+If `--chart` flag is provided, helm chart to deploy the service will be created.
 
 ```shell
 crud init github.com/piyushjajoo/inventory --swagger --chart
