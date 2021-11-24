@@ -46,11 +46,11 @@ var initCmd = &cobra.Command{
 	By default if no flags provided it initializes following -
 	
 	1. go.mod and go.sum files
-	2. Dockerfile to build your micro-service
+	2. Dockerfile to build your micro-service along with build.sh script
 	3. main.go with bare http-server written in gorilla mux
 	4. README.md with basic Summary
 
-	If you want api documentation provide --api flag. If you want helm chart provide --helm flag.
+	If you want api documentation provide --swagger flag. If you want helm chart provide --chart flag.
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
