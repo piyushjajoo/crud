@@ -7,7 +7,7 @@ build scripts, api documentation, micro-service documentation and k8s deployment
 Run following command to install the cli -
 
 ```shell
-go install github.com/piyushjajoo/crud
+go install github.com/piyushjajoo/crud@latest
 ```
 
 ### crud help
